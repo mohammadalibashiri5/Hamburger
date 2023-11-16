@@ -11,8 +11,12 @@ class HomeController extends AbstractController
     #[Route('/')]
     public function homePage(): Response
     {
+        $title = 'Nayeb Hamburger';
 
-         $this->render('base.html.twig');
+        return $this->render('base.html.twig',
+        ['title' => $title]);
+
+
     }
 
 }
